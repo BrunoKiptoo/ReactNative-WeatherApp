@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from React Router
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [africanCountries, setAfricanCountries] = useState([]);
@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className="bg-purple-900">
+      <header className="bg-black">
         <div className="container mx-auto py-6 px-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center">
@@ -56,13 +56,17 @@ const Header = () => {
                   Filter
                 </button>
                 {showDropdown && (
-                  <ul className="absolute bg-purple-900 text-white mt-2 py-2 px-4 rounded-md shadow-md">
+                  <ul className="absolute bg-black text-white mt-2 py-2 px-4 rounded-md shadow-md">
                     {africanCountries.map((country) => (
                       <li key={country} className="py-1">
                         <button
                           className="text-white hover:text-purple-400"
                           onClick={() => handleFilter(country)}
                         >
+                          <span
+                            className={`flag-icon flag-icon-${country.toLowerCase()}`}
+                            style={{ marginRight: '8px' }}
+                          />
                           {country}
                         </button>
                       </li>
