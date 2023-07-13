@@ -11,12 +11,14 @@ function LandingPage() {
           <div className="flex items-center justify-center mb-6">
             <img src={logo} alt="Marathon Analytics Logo" className="h-12 w-12" />
             <h2 className="text-4xl font-semibold animate-fade-in-down">
-              Welcome to Marathon Analytics
+              Marathon Analytics
             </h2>
           </div>
+          <>
           <p className="text-xl mb-10 animate-fade-in-up">
             Unleash the power of data and revolutionize sports investment
           </p>
+          </>
           <button className="bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 px-8 rounded-lg animate-fade-in">
             Get Started
           </button>
